@@ -36,6 +36,6 @@ With all environment variables changed to suit your local copy of this repositor
 * Heroku
 * Django3
 # License
-* [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+* [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 * Copyright(c)2021 Maryam Muchai
