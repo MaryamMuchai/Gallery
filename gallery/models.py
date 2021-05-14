@@ -15,5 +15,22 @@ class Category(models.Model):
 
 class Location(models.Model):
     name = models.CharField(max_length=60)
+
     @classmethod
-    def
+    def get_locations(cls):
+        locations = Location.objects.all()
+        return locations
+
+    def __str__(self) -> str:
+        return self.name
+
+    @classmethod
+    def update_location(cls, id, value):
+        cls.objects.filter(id=id).update(image=value)
+
+    def delete_location(self):
+        self.delete()
+
+    def save_location(self):
+        self.save()
+        
