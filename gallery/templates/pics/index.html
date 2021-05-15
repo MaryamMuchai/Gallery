@@ -4,7 +4,7 @@
     <h2 class="text-white">Welcome to My Gallery</h2>
     <a href="#" class="scroll"><button class="btn btn-light">Search</button></a>
 </div>
-
+<!---location section-->
 <div class="container-lg">
     <div class="container">
         <div class="col-md-7">
@@ -17,5 +17,13 @@
                 {%endfor%}
             </span>
         </div>
+<!----images section-->
+<div class="card-body">
+    {% for image in images %} 
+    <div class="card" data-toggle="modal" data-target="#{{image.id}}">
+        <img src="{{image.image.url}}" alt="{{image.name}}" class="card-img">
+    </div>
+
+</div>
     </div>
 </div>
