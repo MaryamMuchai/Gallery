@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Location, Image, Category
+from cloudinary.forms import cl_init_js_callbacks
 
 # Create your views here.
 def index(request):

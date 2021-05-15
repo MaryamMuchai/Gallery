@@ -18,10 +18,10 @@
     </head>
     <body>
         <div class="overlay">
-            
+
             {% include "navbar.html" %}
             {% block content %}
-        
+            {% load cloudinary %} 
             {% endblock %}
         
             {% block scripts %}
