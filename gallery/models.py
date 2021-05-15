@@ -35,7 +35,7 @@ class Location(models.Model):
         self.save()
 
 class Image(models.Model):
-    image = CloudinaryField(upload_to = "images/", null=True)
+    image = CloudinaryField('image', null=True) 
     name = models.CharField(max_length=60)
     description = models.TextField()
     date = models.DateField(auto_now_add=True)
