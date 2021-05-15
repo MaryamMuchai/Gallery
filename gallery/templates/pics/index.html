@@ -20,10 +20,20 @@
 <!----images section-->
 <div class="card-body">
     {% for image in images %} 
+
+    <button type="button" class="exit" data-dismiss="modal" aria-label="EXit">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    
     <div class="card" data-toggle="modal" data-target="#{{image.id}}">
         <img src="{{image.image.url}}" alt="{{image.name}}" class="card-img">
     </div>
-
+<!---click on a single photo to expand it and view the details-->
+<div class= "modal fade" id="{{image.id}}">
+    <div class="modal-header">
+    <h5 class="modal-title" id="imageheader">{{image.name}}</h5>
+    
+</div>
 </div>
     </div>
 </div>
