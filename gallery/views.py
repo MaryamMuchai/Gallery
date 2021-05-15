@@ -25,7 +25,10 @@ def get_category(request,category):
     category_result = Image.objects.filter(image_category__category_name = category)
     return render(request,'index.html',{'all_images':category_result,'category_results':category_results,'location_results':location_results})
 
-
+def image_location(request,location):
+    images = Image.filter_by_location(location)
+    print(images)
+    return render(request,'index.html',{'location_images':images})
 
 
     
