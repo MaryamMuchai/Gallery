@@ -22,6 +22,7 @@
     {% for image in images %} 
 
     <button type="button" class="exit" data-dismiss="modal" aria-label="EXit">
+    <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close</button>
         <span aria-hidden="true">&times;</span>
     </button>
 
@@ -39,7 +40,14 @@
         <p class="text-center">{{image.category}}</p>
         <a href="/location/{{image.location}}" class="btn btn-info">{{image.location}}</a>
 </div>
-
+<!--the link description-->
+<div class="modal-footer">
+    <input class="form-control input-sm" id="inputsm" type="text" value="{{image.image.url}}" id="{{image.id}}.url">
+    <button class="btn btn-success" onclick="copyLink('{{image.id}}.url')">Copy Link</button>
+</div>
+</div>
+{%endfor%}
 </div>
     </div>
 </div>
+{% endblock %}
