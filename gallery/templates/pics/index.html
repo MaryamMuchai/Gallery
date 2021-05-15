@@ -24,7 +24,7 @@
     <button type="button" class="exit" data-dismiss="modal" aria-label="EXit">
         <span aria-hidden="true">&times;</span>
     </button>
-    
+
     <div class="card" data-toggle="modal" data-target="#{{image.id}}">
         <img src="{{image.image.url}}" alt="{{image.name}}" class="card-img">
     </div>
@@ -32,8 +32,14 @@
 <div class= "modal fade" id="{{image.id}}">
     <div class="modal-header">
     <h5 class="modal-title" id="imageheader">{{image.name}}</h5>
-    
 </div>
+<div class="modal-body">
+    <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
+    <p class="text-center">{{image.description</p>
+        <p class="text-center">{{image.category}}</p>
+        <a href="/location/{{image.location}}" class="btn btn-info">{{image.location}}</a>
+</div>
+
 </div>
     </div>
 </div>
