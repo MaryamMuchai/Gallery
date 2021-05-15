@@ -19,3 +19,13 @@ def search_results(request):
         message = "You haven't searched for any term"
         return render(request, 'index.html',{"message":message})
 
+def get_category(request,category):
+    category_results = Category.objects.all()
+    location_results = Location.objects.all()
+    category_result = Image.objects.filter(image_category__category_name = category)
+    return render(request,'index.html',{'all_images':category_result,'category_results':category_results,'location_results':location_results})
+
+
+
+
+    
