@@ -1,8 +1,7 @@
 {% extends 'base.html' %} 
 {% block content %} 
 <div class="container-fluid landing">
-    <h2 class="text-white">Welcome to My Gallery</h2>
-    <a href="#" class="scroll"><button class="btn btn-light">Search</button></a>
+    <h2 class="text-center">Welcome to My Gallery</h2>
 </div>
 <!---location section-->
 <div class="container-lg">
@@ -10,7 +9,7 @@
         <div class="col-md-7">
             <h2>Pictures</h2>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7"></div>
             <span id="loc">
                 {% for location in locations %} 
                 <a class="btn btn-outline-info btn-sm" href="/location/{{location.name}}">{{location.name}}</a>

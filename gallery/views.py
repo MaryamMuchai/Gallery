@@ -3,10 +3,11 @@ from .models import Location, Image, Category
 
 # Create your views here.
 def index(request):
-    images = Image.objects.all()
-    locations = Location.objects.locations()
+    image = Image.objects.all()
+    locations = Location.get_locations()
     category = Category.objects.all() 
-    return render(request, 'index.html', {'images': images[::-1], 'locations': locations, 'category':category})
+    print(locations)
+    return render(request, 'index.html', {'image': image[::-1], 'locations': locations, 'category':category})
 
 def search_results(request):
     if 'imagesearch' in request.GET and request.GET["imagesearch"]:
