@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+{% block content %} 
+<div class="container-fluid landing">
+    <h2 class="text-white">Welcome to My Gallery</h2>
+    <a href="#" class="scroll"><button class="btn btn-light">Search</button></a>
+</div>
+
+<div class="container-lg">
+    <div class="container">
+        <div class="col-md-7">
+            <h2>Pictures</h2>
+        </div>
+        <div class="col-md-7">
+            <span id="loc">
+                {% for location in locations %} 
+                <a class="btn btn-outline-info btn-sm" href="/location/{{location.name}}">{{location.name}}</a>
+                {%endfor%}
+            </span>
+        </div>
+    </div>
+</div>
