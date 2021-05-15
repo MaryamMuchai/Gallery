@@ -1,10 +1,50 @@
+<!----Font Awesome-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.11.0/css/mdb.min.css" rel="stylesheet">
+
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
     <a class="navbar-brand text-white" href="/"><h3><strong>My Gallery</strong></h3></a>
     
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+<a class="nav-link" href="{% url 'homepage' %}"style="font-size:30px;color:white;font-weight:bold">Home <span class="sr-only">(current)</span></a></li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="font-size:30px;color:white;font-weight:bold">
+    Category
+    </a>
+    <!--category title-->
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      {% for category in category_results %}
+      <a class="dropdown-item" href="/category/{{category.title}}">{{category.title}}</a>
+      <div class="dropdown-divider"></div>
+
+      {% endfor %}
+    </div>
+    </li>
+<!--location-->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:30px;color:white;font-weight:bold">
+        Locations
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        {% for category in location_results %}
+        <a class="dropdown-item" href="/location/{{category.location_title}}">{{category.location_title}}</a>
+        <div class="dropdown-divider"></div>
+      {% endfor %}
+    </div>
+    </li>
+</ul>
+<form class="form-control" action="{% url 'search_results'%}"></form>"
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
         </ul>
         <button class="btn btn-info btn-md my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
