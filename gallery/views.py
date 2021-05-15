@@ -7,3 +7,15 @@ def index(request):
     locations = Location.objects.locations()
     category = Category.objects.all() 
     return render(request, 'index.html', {'images': images[::-1], 'locations': locations, 'category':category})
+
+def search_results(request):
+    if 'imagesearch' in request.GET and request.GET["imagesearch"]:
+        category = request.GET.get("imagesearch") 
+        searched_image = Image.search_by_category(category)
+        message = f"{category}"
+        print(searched_image)
+        return render(request, 'index.html',{"message":message,"all_images": searched_image})
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'index.html',{"message":message})
+
