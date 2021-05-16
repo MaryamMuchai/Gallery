@@ -6,7 +6,8 @@ app_name = "gallery"
 urlpatterns = [
     path('',views.index,name='index'),
     path('search/', views.search_results, name='search'),
-    path('location/<int:location>/',views.image_location,name = 'location') 
+    path('category/(\w+)', views.get_category,name='get_category'),
+    path('location/(\w+)',views.image_location, name = 'location') 
 ]
 
 if settings.DEBUG:
