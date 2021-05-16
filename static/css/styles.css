@@ -19,7 +19,8 @@ h2 {
     
     }
     body{
-     scroll-behavior: smooth;
+    background-image: url('https://www.publicdomainpictures.net/pictures/200000/nahled/glass-background-1478463270LGC.jpg');
+    scroll-behavior: smooth;
     background-attachment:fixed;
     background-repeat:no-repeat;
     background-position:center;

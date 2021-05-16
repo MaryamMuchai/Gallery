@@ -7,21 +7,21 @@
 
 
 
-<nav class="navbar navbar-expand-lg bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
     <a class="navbar-brand" href="/" style="font-size:30px;color:white;font-weight: bolder"><h3><strong>My Gallery</strong></h3></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-<a class="nav-link" href="#a" style="font-size:20px;color:white;font-weight:bold">Home <span class="sr-only">(current)</span></a></li>
+<a class="navbar navbar-default" data-spy="affix" data-offset-top="150" href="/" style="font-size:20px;color:white;font-weight:bold">Home <span class="sr-only">(current)</span></a></li>
 
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#c" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
     style="font-size:20px;color:white">Category</a>
-    <!--category title-->
+    category title
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       {% for category in category_results %}
       <a class="dropdown-item" href="/category/{{category.category.title}}">{{category.category.title}}</a>
@@ -30,7 +30,7 @@
       {% endfor %}
     </div>
     </li>
-<!--location-->
+location
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:20px;color:white">
         Locations
@@ -42,17 +42,22 @@
       {% endfor %}
     </div>
     </li>
-</ul>
+</ul> -->
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
         </ul>
+        <div class="col-md-4"></div>
+        <span id="locations">
+            {% for location in locations %} 
+            <a class="btn btn-success btn-sm" id='btn' href="/location/{{location.name}}">{{location.name}}</a>
+            {%endfor%}
+        </span>
         <form class="form-inline my-2 my-lg-0" action="/search">
-        <input class="inputsm" type="search" placeholder="Search" name="searchItem" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" name="imagesearch" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"style="font-size:10px;color:black">Search</button>
         </form>
   </div>
 </nav>
-
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->

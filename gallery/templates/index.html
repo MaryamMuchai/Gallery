@@ -7,17 +7,13 @@
 </div>
 <!---location section-->
 <div class="container-fluid boded" id="b">
+    
     <div class="container">
         <div class="row">
         <div class="col-md-7">
             <h2>Pictures</h2>
         </div>
-        <div class="col-md-7"></div>
-            <span id="locations">
-                {% for location in locations %} 
-                <a class="btn btn-outline-success btn-sm" id='btn' href="/location/{{location.name}}">{{location.name}}</a>
-                {%endfor%}
-            </span>
+       
         </div>
         </div>
 <!----images section-->
@@ -45,10 +41,9 @@
 <!--the link description-->
 <div class="modal-footer">
 
-    <input class="form-control input-sm" id="inputsm" type="text" value="{{image.image.url}}" id="{{image.id}}.url">
-    <button class="btn btn-outline-success" onclick="myFunction('{{image.id}}.url')">Copy <Link></Link></button>
-    <button type="button" style="color: #d6962c" class="btn btn-outline-danger" data-dismiss="modal">Close
-        </button>
+    <input class="form-control" id="imagelink" type="text" value="{{image.image.url}}" id="{{image.id}}.url">
+    <button class="btn btn-outline-success" onclick="copyFunction('{{image.id}}.url')">Copy Link</button>
+    <a href="/" class="btn btn-dark my-3">Exit</a>
 </div>
     </div>
     </div>

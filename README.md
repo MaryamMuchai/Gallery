@@ -4,6 +4,12 @@
 # DESCRIPTION
 A django personal gallery that allows a user to upload images for others to see
 #  LIVE LINK
+# Screenshots
+### Homepage
+![Screenshot from 2021-05-16 23-53-59](https://user-images.githubusercontent.com/78798386/118412602-90c9c980-b6a3-11eb-83ca-b310dbe2a9b2.png)
+### Viewing Image
+![Screenshot from 2021-05-16 23-11-17](https://user-images.githubusercontent.com/78798386/118412629-b8b92d00-b6a3-11eb-8288-b44031dd790b.png)
+
 # USER STORY
 * View different photos that interest them
 * Click a single image to expand it and view the details of that photo
