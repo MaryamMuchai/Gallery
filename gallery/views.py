@@ -12,9 +12,9 @@ def index(request):
 
 def search_results(request):
     if 'imagesearch' in request.GET and request.GET["imagesearch"]:
-        category = request.GET.get("imagesearch")
-        searched_images = Image.search_by_location(category)
-        message = f"{category}"
+        categorys = request.GET.get("imagesearch")
+        searched_images = Image.search_by_category(categorys)
+        message = f"{categorys}"
         print(searched_images)
         return render(request, 'search.html',{"message":message,"images": searched_images})
     else:

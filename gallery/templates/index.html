@@ -41,8 +41,9 @@
 <!--the link description-->
 <div class="modal-footer">
 
-    <input class="form-control" id="imagelink" type="text" value="{{image.image.url}}" id="{{image.id}}.url">
-    <button class="btn btn-outline-success" onclick="copyFunction('{{image.id}}.url')">Copy Link</button>
+    <input class="form-control" id="imagelink" type="text" value="https://mygallery2021.herokuapp.com{{image.image.url}}" 
+    id="{{image.id}}.url">
+    <button class="btn btn-outline-success copy" onclick="copyFunction('{{image.id}}.url')">Copy Link</button>
     <a href="/" class="btn btn-dark my-3">Exit</a>
 </div>
     </div>

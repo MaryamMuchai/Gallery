@@ -5,16 +5,18 @@
 A django personal gallery that allows a user to upload images for others to see
 #  LIVE LINK
 https://mygallery2021.herokuapp.com/
-# Screenshots
+# User Story with Pictures
+### Screenshots
 ### Homepage
+* View different photos that interest them
 ![Screenshot from 2021-05-16 23-53-59](https://user-images.githubusercontent.com/78798386/118412602-90c9c980-b6a3-11eb-83ca-b310dbe2a9b2.png)
 ### Viewing Image
-![Screenshot from 2021-05-16 23-11-17](https://user-images.githubusercontent.com/78798386/118412629-b8b92d00-b6a3-11eb-8288-b44031dd790b.png)
-
-# USER STORY
-* View different photos that interest them
 * Click a single image to expand it and view the details of that photo
+![Screenshot from 2021-05-16 23-11-17](https://user-images.githubusercontent.com/78798386/118412629-b8b92d00-b6a3-11eb-8288-b44031dd790b.png)
+### Search
 * Search for different categories
+![Screenshot from 2021-05-17 16-57-41](https://user-images.githubusercontent.com/78798386/118502001-f2387980-b731-11eb-8373-4b9e7be9a56f.png)
+![Screenshot from 2021-05-17 15-53-53](https://user-images.githubusercontent.com/78798386/118501890-db922280-b731-11eb-9916-149700dafd10.png)
 * Copy a link to the photo to share with my friends.
 * View photos based on the location they were taken.
 # SETUP & INSTALLATION
