@@ -2,8 +2,8 @@
 # AUTHOR
 [Maryam-Muchai](https://github.com/MaryamMuchai/Gallery.git)
 # DESCRIPTION
-A django personal gallery that allows a user to upload images for others to see
-#  LIVE LINK
+A Django application for personal gallery that allows users to upload images for other to see and be able to share by coping the image link.
+# LIVE LINK
 https://mygallery2021.herokuapp.com/
 # User Story with Pictures
 ### Screenshots
