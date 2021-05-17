@@ -100,6 +100,8 @@ if config('MODE')=="dev":
         'NAME': config('gallery'),
         'USER': config('maryam'),
         'PASSWORD': config('1234'),
+        'HOST': config('127.0.0.1'),
+        'PORT':'',
     }
 }
 #production
