@@ -31,10 +31,10 @@ SECRET_KEY = config('SECRET_KEY')
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-v5vyyy_8pxz)d1&ehiy!#-qcuriy_^#sf^3bqm(fu7rpgoa^_9'
+SECRET_KEY = ('django-insecure-v5vyyy_8pxz)d1&ehiy!#-qcuriy_^#sf^3bqm(fu7rpgoa^_9')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -83,6 +83,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
@@ -106,7 +107,7 @@ if config('MODE')=="dev":
 }
 #production
 else:
-   DATABASES = {
+    DATABASES = {
        'default': dj_database_url.config(
            default=config('DATABASE_URL')
        )
