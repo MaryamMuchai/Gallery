@@ -26,23 +26,23 @@ from decouple import config,Csv
 
 # SECURITY WARNING: keep the secret key used in production secret!
 MODE=config("MODE", default="dev")
+
 SECRET_KEY = config('SECRET_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = ('django-insecure-v5vyyy_8pxz)d1&ehiy!#-qcuriy_^#sf^3bqm(fu7rpgoa^_9')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG =config('DEBUG') 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS =config('ALLOWED_HOSTS', cast=Csv()) 
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'gallery',
+    'gallery.apps.GalleryConfig',
     'bootstrap3',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -83,6 +83,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
 
             ],
         },
@@ -94,20 +95,21 @@ WSGI_APPLICATION = 'picha.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
 if config('MODE')=="dev":
     DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('gallery'),
-        'USER': config('maryam'),
-        'PASSWORD': config('1234'),
-        'HOST': config('127.0.0.1'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
         'PORT':'',
     }
 }
 #production
 else:
-    DATABASES = {
+   DATABASES = {
        'default': dj_database_url.config(
            default=config('DATABASE_URL')
        )
